@@ -8,15 +8,11 @@ when making a shared object; recompile with -fPIC
 ## Solution:
 ```
 // Clean everything for recompiliation on the Mupdf build; not the extension with Zathura (if needed)
-sudo make clean
-
-sudo CFLAGS="-fPIC" CXXFLAGS="-fPIC" make prefix=/usr/local install 
-
-cd /path/to/zathura-mupdf-x/build
-
-ninja 
-
-ninja install
+$ sudo make clean
+$ sudo CFLAGS="-fPIC" CXXFLAGS="-fPIC" make prefix=/usr/local install 
+$ cd /path/to/zathura-mupdf-x/build
+$ ninja 
+$ ninja install
 ```
 
 ## Explanation:
